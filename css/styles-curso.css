@@ -1,0 +1,55 @@
+/*<?php header("Content-type: text/css"); ?>
+
+
+//Creo un array con varios colores
+/*$color[0]='#ff0000';
+$color[1]='#00ff00';
+$color[2]='#0000ff';
+
+// Elijo un color aleatorio
+$i=rand(0,2);
+?>
+
+ indico donde quiero que aparezca el color aleatorio
+body { background-color: <?=$color[$i]?>;} */
+
+
+.contenido-inicio-curso{
+  max-width: 60%;
+  margin: 7% auto 4%;
+}
+.inicio-curso {
+  text-align: center;
+  color: white;
+}
+h1 span{
+  display: block;
+  font-size: .5em;
+  font-weight: 400;
+}
+
+h1
+{
+  font-size: 4em;
+  font-weight: 600;
+}
+.cert img{
+  display: block;
+}
+.cert span{
+  font-size: 1.5em;
+}
+.inicio-curso .precio{
+  max-width: 40%;
+  background: rgba(255,255,255, 0.57);
+  margin: 2% auto;
+  padding: 4%;
+}
+.cant-cuota{
+  font-size: 1em!important;
+}
+.precio span{
+  display: block;
+  font-size: 3em;
+
+}

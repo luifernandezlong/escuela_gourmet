@@ -1,0 +1,33 @@
+body{
+  margin: 0 auto;
+
+}
+h1{
+  margin:2% 0;
+}
+p{
+  font-size: 16px;
+}
+.menu{
+  display:block;
+  position: fixed;
+  background-color: rgba(255,255,255,0.8);
+  width: 100%;
+  padding: 0 10%;
+  margin: 0 auto;
+}
+.menu ul{
+  float: right;
+}
+.menu img{
+  float: left;
+}
+.nav-tabs > li > a{
+  line-height: 5em;
+}
+.dropdown-item{
+  display: block;
+  width: 100%;
+  padding: .25rem 1.25rem;
+  white-space: nowrap;
+}

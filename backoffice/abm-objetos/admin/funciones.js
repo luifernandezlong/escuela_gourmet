@@ -1,4 +1,4 @@
-$(document).ready(function(){
+/*$(document).ready(function(){
 	consulta();
 
 	$('#exampleModal').on('show.bs.modal', function (event) {
@@ -18,7 +18,7 @@ $(document).ready(function(){
 	});
 
 function consulta(){
-	
+
 	$.ajax({
 	  method: "POST",
 	  url: "consulta.php",
@@ -39,10 +39,10 @@ function altaModi(){
 		  url: "modi.php",
 		  data:{
 		  	//sub indice de post con cual se van a recibir los datos en alta
-		  	codigo: $("#codigo").val(), //.val() equivalente a .value() js 
-		  	nombre: $("#nombre").val(), //.val() equivalente a .value() js 
+		  	codigo: $("#codigo").val(), //.val() equivalente a .value() js
+		  	nombre: $("#nombre").val(), //.val() equivalente a .value() js
 		  	descripcion: $("#descripcion").val(),
-		  	precio: $("#precio").val() 
+		  	precio: $("#precio").val()
 		  },
 		  success: function(){
 		  	$('#exampleModal').modal('hide');
@@ -57,15 +57,15 @@ function altaModi(){
 		  url: "alta.php",
 		  data:{
 		  	//sub indice de post con cual se van a recibir los datos en alta
-		  	nombre: $("#nombre").val(), //.val() equivalente a .value() js 
+		  	nombre: $("#nombre").val(), //.val() equivalente a .value() js
 		  	descripcion: $("#descripcion").val(),
-		  	precio: $("#precio").val() 
+		  	precio: $("#precio").val()
 		  },
 		  success: function(){
 		  	$('#exampleModal').modal('hide');
 		  	consulta();
 		  }
-		});	
+		});
 	}
 
 }
@@ -83,8 +83,6 @@ function baja(cod){
 		  }
 		});
 	}
-	
-}	
 
-
-
+}
+*/

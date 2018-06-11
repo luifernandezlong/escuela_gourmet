@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	consulta();
-})
+
 
 
 function consulta(){
@@ -17,7 +17,7 @@ function consulta(){
 
 function altaModi(){
 
-	if ($("#codigo").val() != ''){
+	if ($("#id_fecha").val() != ''){
 		$("#accionButton").html("Modificar");
 		$.ajax({
 		  method: "POST",
@@ -52,10 +52,11 @@ alert("Alta1");
 				alert("Alta");
 		  }
 		});
+	}
 
-
-/*
-function baja(cod){
+}
+}
+/*function baja(cod){
 	if (confirm("Confirma la baja")){
 		$.ajax({
 		  method: "POST",

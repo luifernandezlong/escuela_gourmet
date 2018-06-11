@@ -46,7 +46,7 @@
     </div>
   </form>
 <div class="modal-footer">
-    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+    <button type="button" class="btn btn-secondary" >Cancelar</button>
     <button type="button" class="btn btn-primary" onclick="altaModi();" id="accionButton">Dar de Alta</button>
   </div>
 
