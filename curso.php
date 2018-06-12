@@ -41,13 +41,23 @@
 												<a class="btn btn-primary btn-lg">Inscribirme</a>
 											</div>
 										</div>
-									</div>';
-
-
-						}
-
-
-
+									</div>
+									<div class="fechas contenido container-fluid">
+										<h2 style="color:'.$row['color'].';">Inicios del '.$row['title'].'</h2>
+										<a class="btn btn-primary btn-lg" src="#">INSCRIBIRME</a>
+									</div>
+									<div class="form" style="background-color:'.$row['color'].';">
+										<h5>¡CONSULTANOS!</h5>
+										<form>
+											    <input type="text" class="izq" placeholder="NOMBRE">
+											    <input type="text" class="der" placeholder="MAIL">
+										      <input type="text" class="izq" placeholder="TELÉFONO">
+										      <input type="text" class="der" placeholder="'.$row['title'].'" readonly>
+										</form>
+									</div>
+							'
+					;
+					}
 					} else{
 								echo 'Ha habido un error, por favor vuelva a cargar la página.';
 							}
