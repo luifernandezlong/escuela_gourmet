@@ -7,6 +7,7 @@ if (!isset($_SESSION['usuario'])){
             </script>';
 }
 ?>
+<?php ini_set("log_errors", 1); ini_set("error_log", "./php-error.log"); error_log( "Hello, errors!" ); ?>
 <!DOCTYPE HTML>
 <html lang="es">
 <head>
@@ -48,7 +49,7 @@ if (!isset($_SESSION['usuario'])){
 		  </div>
 		  <div class="form-group">
 		    <label for="nombre">Nombre</label>
-		    <input type="text" class="form-control" name="id_curso" id="id_nombre" placeholder="Escriba nombre del producto">
+		    <input type="text" class="form-control" name="id_curso" id="id_curso" placeholder="Escriba nombre del producto">
 		  </div>
 		  <div class="form-group">
 		    <label for="descripcion">Descripcion</label>

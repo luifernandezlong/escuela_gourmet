@@ -55,6 +55,7 @@ function altaModi(){
 			alert("modi");
 	}else {
 		$("#accionButton").html("Dar de alta");
+
 		$.ajax({
 		  method: "POST",
 		  url: "alta.php",
@@ -77,17 +78,18 @@ function altaModi(){
 
 }
 
-function baja(cod){
+function baja(id_fechas){
 	if (confirm("Confirma la baja")){
 		$.ajax({
 		  method: "POST",
 		  url: "baja.php",
 		  data:{
-		  	codigo: cod
+		  	id_fechas: $("#id_fechas").val()
 		  },
 		  success: function(){
 		  	consulta();
 		  }
 		});
+		alert("baja");
 	}
 }

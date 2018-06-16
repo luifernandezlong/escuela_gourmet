@@ -3,10 +3,10 @@
 	include('autoload.php');
 
 	$base = new BasedeDatosmysqli(SERVIDOR, USUARIO, PASSWORD, BASE);
-	$fechas = new Producto($base);
+	$productos = new Producto($base);
 
-	$fechas = $fechas->modificarProductos($_POST['id_fechas'], $_POST['id_curso'], $_POST['fecha'], $_POST['horario'], $_POST['duracion']);
-	if($fechas){
+	$productos = $productos->modificarProductos($_POST['id_fechas'], $_POST['id_curso'], $_POST['fecha'], $_POST['horario'], $_POST['duracion']);
+	if($productos){
 
 		echo 'Fecha modificada';
 

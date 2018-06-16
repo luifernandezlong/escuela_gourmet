@@ -3,13 +3,13 @@
 	include('autoload.php');
 
 	$base = new BasedeDatosmysqli(SERVIDOR, USUARIO, PASSWORD, BASE);
-	$fechas = new Producto($base);
+	$productos = new Producto($base);
 
-	$fechas = $fechas->bajaProducto($_POST['id_fechas'], $_POST['id_curso'], $_POST['fecha'], $_POST['horario'], $_POST['duracion']);
+	$productos = $productos->bajaProducto($_POST['id_fechas'], $_POST['id_curso'], $_POST['fecha'], $_POST['horario'], $_POST['duracion']);
 
-	if($fechas){
+	if($productos){
 
-		echo 'Producto modificado';
+		echo 'Producto eliminado';
 
 	}
 

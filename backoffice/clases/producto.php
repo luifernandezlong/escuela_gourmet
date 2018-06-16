@@ -128,12 +128,11 @@ class producto {
 
 
 	public function altaProductos($curso, $fecha, $hor, $dur){
-
 		$respuesta = $this->db->enviarQuery("INSERT INTO fechas VALUES (null,  id_curso = '$curso', fecha = '$fecha', horario = '$hor', duracion = '$dur')");
 
 		if($respuesta){
 			//si la query esta ok devuelvo respuesta
-			return holi;
+			return $respuesta;
 
 		}else{
 
