@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset ($_SESSION["usuario"])) {
-	echo '<script type="text/javascript">window.location="backoffice.php";</script>';
+	echo '<script type="text/javascript">window.location="backoffice2.php";</script>';
 }
 ?>
 <!DOCTYPE HTML>
@@ -12,7 +12,7 @@ if (isset ($_SESSION["usuario"])) {
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
 </script>
 <![endif]-->
-<title>Carrito de Compras - Admin (index)</title>
+<title>Backoffice</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="../css/backoffice.css">

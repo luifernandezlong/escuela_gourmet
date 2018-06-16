@@ -22,8 +22,7 @@ class producto {
 				}
 			}
 	}
-
-	public function getProductosa(){
+/*	public function getProductosa(){
 		$respuesta = $this->db->enviarQuery("SELECT * FROM fechas ORDER BY fecha ASC");
 		if($respuesta) {
 			//si la query esta ok devuelvo respuesta
@@ -125,16 +124,16 @@ class producto {
 			}
 	}
 
-
+*/
 
 
 	public function altaProductos($curso, $fecha, $hor, $dur){
 
-		$respuesta = $this->db->enviarQuery("INSERT INTO fechas VALUES (null, '$curso', '$fecha', '$hor', '$dur')");
+		$respuesta = $this->db->enviarQuery("INSERT INTO fechas VALUES (null,  id_curso = '$curso', fecha = '$fecha', horario = '$hor', duracion = '$dur')");
 
 		if($respuesta){
 			//si la query esta ok devuelvo respuesta
-			return $respuesta;
+			return holi;
 
 		}else{
 

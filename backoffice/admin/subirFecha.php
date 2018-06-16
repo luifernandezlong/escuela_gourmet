@@ -22,7 +22,7 @@
   <form action="" method="post">
     <div class="form-group">
         <label for="nombre">Codigo</label>
-        <input type="text" class="form-control" name="codigo" id="id_fecha" readonly="readonly">
+        <input type="text" class="form-control" name="id_fecha" id="id_fecha" readonly="readonly">
     </div>
     <div class="form-group">
       <label for="nombre">Curso/carrera</label>
@@ -30,7 +30,7 @@
         <li>1 = Curso de Bartender</li>
         <li>2 = Carrera de Bar Manager</li>
       </ul>
-      <input type="text" class="form-control" name="Curso" id="id_curso" placeholder="1">
+      <input type="text" class="form-control" name="id_curso" id="id_curso" placeholder="1">
     </div>
     <div class="form-group">
       <label for="nombre">Fecha</label>
@@ -51,7 +51,9 @@
   </div>
 
   </div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="../boot/js/bootstrap.min.js"></script>
 <script src="funciones.js"></script>
 </body>
 </html>

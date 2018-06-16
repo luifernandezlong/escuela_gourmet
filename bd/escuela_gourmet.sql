@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 04-06-2018 a las 01:00:35
+-- Tiempo de generación: 16-06-2018 a las 04:50:51
 -- Versión del servidor: 5.5.24-log
 -- Versión de PHP: 5.4.3
 
@@ -95,10 +95,11 @@ CREATE TABLE IF NOT EXISTS `curso` (
   `bg` varchar(255) NOT NULL,
   `h1` varchar(255) NOT NULL,
   `descripcion` text NOT NULL,
-  `cantidad_cuotas` int(11) NOT NULL,
+  `cantidad_cuotas` varchar(20) NOT NULL,
   `cuota` int(11) NOT NULL,
   `video` varchar(255) NOT NULL,
   `divisor` varchar(255) NOT NULL,
+  `color` varchar(10) NOT NULL,
   PRIMARY KEY (`id_curso`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
@@ -106,8 +107,8 @@ CREATE TABLE IF NOT EXISTS `curso` (
 -- Volcado de datos para la tabla `curso`
 --
 
-INSERT INTO `curso` (`id_curso`, `tipo`, `area`, `title`, `icono`, `bg`, `h1`, `descripcion`, `cantidad_cuotas`, `cuota`, `video`, `divisor`) VALUES
-(1, 'curso', 'cocteleria', 'Curso de Bartender', '', 'img/curso/curso-de-bartender.png', 'Curso de Bartender', 'El Curso de Bartender está diseñado para formar a los mejores profesionales en el arte de mezclar bebidas. Ya sea que quieras trabajar de esto o simplemente preparar los mejores cócteles para tus amigos, te brindaremos el curso más divertido y exigente del mercado.', 1, 1990, 'https://youtu.be/-QCNM8iXzJM', 'img/curso/bartender-separador.png');
+INSERT INTO `curso` (`id_curso`, `tipo`, `area`, `title`, `icono`, `bg`, `h1`, `descripcion`, `cantidad_cuotas`, `cuota`, `video`, `divisor`, `color`) VALUES
+(1, 'curso', 'cocteleria', 'Curso de Bartender', '', 'img/curso/curso-de-bartender.png', 'BARTENDER', 'El Curso de Bartender está diseñado para formar a los mejores profesionales en el arte de mezclar bebidas. Ya sea que quieras trabajar de esto o simplemente preparar los mejores cócteles para tus amigos, te brindaremos el curso más divertido y exigente del mercado.', '1 CUOTA', 1990, 'https://youtu.be/-QCNM8iXzJM', 'img/curso/bartender-separador.png', '#3facef');
 
 -- --------------------------------------------------------
 
@@ -118,20 +119,52 @@ INSERT INTO `curso` (`id_curso`, `tipo`, `area`, `title`, `icono`, `bg`, `h1`, `
 CREATE TABLE IF NOT EXISTS `fechas` (
   `id_fechas` int(11) NOT NULL AUTO_INCREMENT,
   `id_curso` int(11) NOT NULL,
-  `fecha` date NOT NULL,
+  `fecha` varchar(255) NOT NULL,
   `horario` text NOT NULL,
   `duracion` text NOT NULL,
   PRIMARY KEY (`id_fechas`),
   KEY `id_curso` (`id_curso`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
 
 --
 -- Volcado de datos para la tabla `fechas`
 --
 
 INSERT INTO `fechas` (`id_fechas`, `id_curso`, `fecha`, `horario`, `duracion`) VALUES
-(1, 1, '0000-00-00', 'Martes y jueves de 10 a 13 hs.', '8 clases - 1 mes');
+(1, 1, '0000-00-00', 'Martes y jueves de 10 a 13 hs.', '8 clases - 1 mes'),
+(10, 1, '1', '0', '0'),
+(11, 1, '1', '0', '0'),
+(12, 1, '1', '0', '0'),
+(13, 1, '1', '0', '0'),
+(15, 1, '1', '0', '0');
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuarios`
+--
+
+CREATE TABLE IF NOT EXISTS `usuarios` (
+  `usuario` char(15) NOT NULL,
+  `password` char(32) NOT NULL,
+  `nombre` varchar(50) NOT NULL,
+  `apellido` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `dni` int(11) NOT NULL,
+  PRIMARY KEY (`usuario`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`usuario`, `password`, `nombre`, `apellido`, `email`, `dni`) VALUES
+('admin', '21232f297a57a5a743894a0e4a801fc3', 'Administrador', 'Administrador', 'admin@misitio.com.ar', 12345678),
+('lu', 'lu', 'Administrador', 'Administrador', 'admin@misitio.com.ar', 12345678);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 --
 -- Restricciones para tablas volcadas
 --

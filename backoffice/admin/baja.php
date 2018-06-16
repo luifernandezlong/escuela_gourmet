@@ -1,6 +1,6 @@
 <?php
 
-	include('loadFecha.php');
+	include('autoload.php');
 
 	$base = new BasedeDatosmysqli(SERVIDOR, USUARIO, PASSWORD, BASE);
 	$fechas = new Producto($base);
