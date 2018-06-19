@@ -47,12 +47,13 @@
 										<a class="btn btn-primary btn-lg" src="#">INSCRIBIRME</a>
 									</div>
 									<div class="form" style="background-color:'.$row['color'].';">
+									<form action="form_procesador.php" method="post" name="formulario" id="section_formulario">
 										<h5>¡CONSULTANOS!</h5>
-										<form>
-											    <input type="text" class="izq" placeholder="NOMBRE">
-											    <input type="text" class="der" placeholder="MAIL">
-										      <input type="text" class="izq" placeholder="TELÉFONO">
-										      <input type="text" class="der" placeholder="'.$row['title'].'" readonly>
+											    <input type="text" class="izq" placeholder="NOMBRE" required  id="nombre">
+											    <input type="text" class="der" placeholder="EMAIL" required  id="email">
+										      <input type="text" class="izq" placeholder="TELÉFONO" required  id="telefono">
+										      <input type="text" class="der" placeholder="'.$row['title'].'" readonly  id="curso">
+													<input type="submit" value="Enviar" class="boton1" />
 										</form>
 									</div>
 							'

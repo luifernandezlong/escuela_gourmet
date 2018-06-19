@@ -9,7 +9,7 @@ if (!isset($_SESSION['usuario'])){
 ?>
 <?php ini_set("log_errors", 1); ini_set("error_log", "./php-error.log"); error_log( "Hello, errors!" ); ?>
 <!DOCTYPE HTML>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <title>Backoffice - Escuela Gourmet</title>
@@ -48,18 +48,18 @@ if (!isset($_SESSION['usuario'])){
 		    <input type="text" class="form-control" name="id_fechas" id="id_fechas" readonly="readonly">
 		  </div>
 		  <div class="form-group">
-		    <label for="nombre">Nombre</label>
+		    <label for="nombre">Curso</label>
 		    <input type="text" class="form-control" name="id_curso" id="id_curso" placeholder="Escriba nombre del producto">
 		  </div>
 		  <div class="form-group">
-		    <label for="descripcion">Descripcion</label>
-		    <textarea placeholder="Escriba descripcion del producto" class="form-control" name="fecha" id="fecha" rows="3"></textarea>
+		    <label for="descripcion">Fecha de inicio</label>
+		    <input placeholder="¿Cuándo empieza?" class="form-control" name="fecha" id="fecha" type="text">
 		  </div>
 		  <div class="form-group">
-				<label for="precio">Precio</label>
-		    <input type="text" class="form-control" name="horario" id="horario" placeholder="Escriba precio del producto">
-				<label for="precio">duracion</label>
-	 		 <input type="text" class="form-control" name="duracion" id="duracion" placeholder="Escriba precio del producto">
+				<label for="precio">Horario</label>
+		    <input type="text" class="form-control" name="horario" id="horario" placeholder="¿Qué días y horarios tendrá el curso/carrera?">
+				<label for="precio">Duración</label>
+	 		 <input type="text" class="form-control" name="duracion" id="duracion" placeholder="¿Cuánto dura?">
 	 	 </div>
 		</form>
       </div>

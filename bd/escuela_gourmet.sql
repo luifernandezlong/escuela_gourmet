@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 16-06-2018 a las 04:50:51
+-- Tiempo de generación: 19-06-2018 a las 02:39:49
 -- Versión del servidor: 5.5.24-log
 -- Versión de PHP: 5.4.3
 
@@ -124,7 +124,7 @@ CREATE TABLE IF NOT EXISTS `fechas` (
   `duracion` text NOT NULL,
   PRIMARY KEY (`id_fechas`),
   KEY `id_curso` (`id_curso`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=53 ;
 
 --
 -- Volcado de datos para la tabla `fechas`
@@ -132,11 +132,30 @@ CREATE TABLE IF NOT EXISTS `fechas` (
 
 INSERT INTO `fechas` (`id_fechas`, `id_curso`, `fecha`, `horario`, `duracion`) VALUES
 (1, 1, '0000-00-00', 'Martes y jueves de 10 a 13 hs.', '8 clases - 1 mes'),
-(10, 1, '1', '0', '0'),
-(11, 1, '1', '0', '0'),
-(12, 1, '1', '0', '0'),
-(13, 1, '1', '0', '0'),
-(15, 1, '1', '0', '0');
+(44, 1, '0', '0', '0'),
+(45, 1, '0', '0', '0'),
+(46, 1, '0', '0', '0'),
+(47, 1, '1', '1', '1'),
+(48, 1, '1', '1', '1'),
+(49, 1, '1', '1', '1'),
+(50, 1, '1', '1', '1'),
+(51, 1, '0', '0', '0'),
+(52, 1, '0', '0', '0');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `formulario`
+--
+
+CREATE TABLE IF NOT EXISTS `formulario` (
+  `id_formulario` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `telefono` varchar(255) NOT NULL,
+  `curso` varchar(255) NOT NULL,
+  PRIMARY KEY (`id_formulario`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -162,9 +181,6 @@ INSERT INTO `usuarios` (`usuario`, `password`, `nombre`, `apellido`, `email`, `d
 ('admin', '21232f297a57a5a743894a0e4a801fc3', 'Administrador', 'Administrador', 'admin@misitio.com.ar', 12345678),
 ('lu', 'lu', 'Administrador', 'Administrador', 'admin@misitio.com.ar', 12345678);
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 --
 -- Restricciones para tablas volcadas
 --

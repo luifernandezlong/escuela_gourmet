@@ -62,26 +62,3 @@ h2{
   text-align: center;
   margin: 5% 0;
 }
-.form h5{
-  font-size: 3em;
-  color:white;
-  text-align: center;
-}
-.form form{
-  max-width: 60%;
-  margin: 0 auto;
-}
-@media (maz-width: 768px) {
-  .form form{
-    max-width: 90%;
-  }
-}
-form .izq{
-  width: 48%;
-  margin-right: 2%;
-  float: left;
-}
-form .der{
-  width: 48%;
-  float: right;
-}

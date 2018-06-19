@@ -55,8 +55,8 @@ class basedeDatosmysqli{
 					$this->error = $this->conexion->error;
 					return false;
 				}
-				else{
-					return 'hola';
+				else{               
+
 					return $this->conexion->insert_id;
 				}
 				break;

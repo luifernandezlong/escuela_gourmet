@@ -9,11 +9,9 @@ class producto {
 	public function getProductos(){
 		$respuesta = $this->db->enviarQuery("SELECT * FROM fechas");
 		if($respuesta) {
-			//si la query esta ok devuelvo respuesta
 			return $respuesta;
 			} else {
 			if(!$respuesta && $this->db->error != '') {
-				//si falla algo muestro el error
 				echo $this->db->error;
 				return false;
 			} else {
