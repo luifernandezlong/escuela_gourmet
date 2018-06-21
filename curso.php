@@ -44,16 +44,40 @@
 									</div>
 									<div class="fechas contenido container-fluid">
 										<h2 style="color:'.$row['color'].';">Inicios del '.$row['title'].'</h2>
-										<a class="btn btn-primary btn-lg" src="#">INSCRIBIRME</a>
+										<div class="container">
+										  <div class="row">
+										    <div class="col-xs-6">Column</div>
+										    <div class="col-xs-6">Column</div>
+										    <div class="w-100"></div>
+										    <div class="col-xs-6">Column</div>
+										    <div class="col-xs-6">Column</div>
+										  </div>
+									  </div>
+											<a class="btn btn-primary btn-lg" src="#">INSCRIBIRME</a>
+									</div>
 									</div>
 									<div class="form" style="background-color:'.$row['color'].';">
 									<form action="form_procesador.php" method="post" name="formulario" id="section_formulario">
 										<h5>¡CONSULTANOS!</h5>
-											    <input type="text" class="izq" placeholder="NOMBRE" required  id="nombre">
-											    <input type="text" class="der" placeholder="EMAIL" required  id="email">
-										      <input type="text" class="izq" placeholder="TELÉFONO" required  id="telefono">
-										      <input type="text" class="der" placeholder="'.$row['title'].'" readonly  id="curso">
-													<input type="submit" value="Enviar" class="boton1" />
+
+										<div class="form-row">
+										    <div class="form-group col-xs-6">
+										      <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+										    </div>
+										    <div class="form-group col-xs-6">
+												<input type="email" class="form-control" id="email" placeholder="Email">
+										    </div>
+										  </div>
+											<div class="form-row">
+											    <div class="form-group col-xs-6">
+													<input type="text" class="form-control" id="telefono" placeholder="Teléfono">
+											    </div>
+											    <div class="form-group col-xs-6">
+													<input type="text" class="form-control" placeholder="'.$row['title'].'" readonly  id="curso">
+											    </div>
+											  </div>
+ 												<button type="submit" class="btn btn-primary btn-lg">Consultanos</button>
+
 										</form>
 									</div>
 							'

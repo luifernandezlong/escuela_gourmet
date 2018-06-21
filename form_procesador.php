@@ -19,15 +19,15 @@
 	?>
 		<div class="contenido_contacto contacto">
 		<?php
-			include('conexion.php');
+			include('inc/conexion.php');
 
 
       $nombre=$_POST['nombre'];
       $email=$_POST['email'];
       $telefono=$_POST['telefono'];
       $curso=$_POST['curso'];
-			$resultado=mysqli_query($conexion, "INSERT INTO formulario VALUES (NULL, '$nombre',
-				'$email', '$telefono', '$curso')");
+			$resultado=mysqli_query($conexion, "INSERT INTO formulario VALUES (NULL, nombre = '$nombre',
+				email = '$email', telefono = '$telefono', curso = '$curso')");
 			$remitente="From: $nombre <$email>";
 			$destino='lu@escuelagourmet.com.ar';
 			$asunto=$nombre . ' envio una consulta a traves de la web';
@@ -35,9 +35,8 @@
 			$contenido.="Mail: " . $email . "\r\n";
 			$contenido.="Telefono: " . $telefono . "\r\n";
 			$contenido.="Curso: " . $curso;
-				$contenido_usuario.= 'A la brevedad responderé tu mensaje';
 			mail($destino,utf8_decode($asunto),utf8_decode($contenido),utf8_decode($remitente));
-			header('location:index.php?envio=ok#contacto');
+			header('location:gracias.php');
 			echo 'Tu mensaje se ha enviado correctamente'
 				// <button onclick="myFunction()">Show Snackbar</button>
 				// <div id="snackbar">Tu mensaje se ha enviado correctamente</div>

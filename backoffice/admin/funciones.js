@@ -60,9 +60,8 @@ function altaModi(){
 		  method: "POST",
 		  url: "alta.php",
 		  data:{
-		  	//sub indice de post con cual se van a recibir los datos en alta
-				id_fechas: $("#id_fechas").val(), //.val() equivalente a .value() js
-				id_curso: $("#id_curso").val(), //.val() equivalente a .value() js
+				id_fechas: $("#id_fechas").val(),
+				id_curso: $("#id_curso").val(),
 				fecha: $("#fecha").val(),
 				horario: $("#horario").val(),
 				duracion: $("#duracion").val()
