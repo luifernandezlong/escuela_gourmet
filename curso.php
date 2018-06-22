@@ -9,8 +9,8 @@
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<link rel="stylesheet" type="text/css" href="css/styles-curso.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
 
@@ -42,21 +42,51 @@
 											</div>
 										</div>
 									</div>
-									<div class="fechas contenido container-fluid">
+									
 										<h2 style="color:'.$row['color'].';">Inicios del '.$row['title'].'</h2>
-										<div class="container">
-										  <div class="row">
-										    <div class="col-xs-6">Column</div>
-										    <div class="col-xs-6">Column</div>
-										    <div class="w-100"></div>
-										    <div class="col-xs-6">Column</div>
-										    <div class="col-xs-6">Column</div>
-										  </div>
-									  </div>
-											<a class="btn btn-primary btn-lg" src="#">INSCRIBIRME</a>
-									</div>
-									</div>
-									<div class="form" style="background-color:'.$row['color'].';">
+										
+									
+									
+							'
+					;
+					}
+					} else{
+								echo 'Ha habido un error, por favor vuelva a cargar la página.';
+							}
+
+
+
+				?>
+<div class="fechas">	<?php
+		include('inc/conexion.php');
+		$sql = "SELECT *  FROM `fechas`";
+				$result = $conexion->query($sql);
+				if ($result -> num_rows > 0) {
+					while($row = $result->fetch_assoc()) {
+						echo '	
+								  
+								   		<div class="col-xs-6 ">
+								    		<span class="fecha"> '.mb_convert_encoding($row['fecha'], "UTF-8").'</span></br>
+										    <span class="horario"> '.mb_convert_encoding($row['horario'], "UTF-8").'</span></br>
+										    <span class="duracion">'.mb_convert_encoding($row['duracion'], "UTF-8").'</span>
+										</div>'
+									;
+								}
+							}else{
+								echo 'not';
+							}
+								
+
+			$conexion->close();
+	?>
+	</div>
+	<?php
+			include('inc/conexion.php');
+			$sql = "SELECT *  FROM `curso`";
+					$result = $conexion->query($sql);
+					if ($result -> num_rows > 0) {
+						while($row = $result->fetch_assoc()) {
+							echo '<div class="form" style="background-color:'.$row['color'].';">
 									<form action="form_procesador.php" method="post" name="formulario" id="section_formulario">
 										<h5>¡CONSULTANOS!</h5>
 
@@ -80,19 +110,11 @@
 
 										</form>
 									</div>
-							'
-					;
-					}
-					} else{
-								echo 'Ha habido un error, por favor vuelva a cargar la página.';
+									';}
+									}else{
+								echo 'error2';
 							}
-
-
-
-				?>
-
-
-
+?>
 	<script src="bootstrap/js/jquery.js"></script>
 	<script src="bootstrap/js/bootstrap.js"></script>
 </body>

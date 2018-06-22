@@ -26,8 +26,8 @@
       $email=$_POST['email'];
       $telefono=$_POST['telefono'];
       $curso=$_POST['curso'];
-			$resultado=mysqli_query($conexion, "INSERT INTO formulario VALUES (NULL, nombre = '$nombre',
-				email = '$email', telefono = '$telefono', curso = '$curso')");
+			$resultado=mysqli_query($conexion, "INSERT INTO formulario VALUES (NULL,'$nombre',
+				'$email', '$telefono', '$curso')");
 			$remitente="From: $nombre <$email>";
 			$destino='lu@escuelagourmet.com.ar';
 			$asunto=$nombre . ' envio una consulta a traves de la web';

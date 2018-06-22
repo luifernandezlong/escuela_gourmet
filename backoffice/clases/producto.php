@@ -22,27 +22,28 @@ class Producto {
 	}
 
 	public function altaProductos($curso, $fecha, $hor, $dur){
-		$respuesta = $this->db->enviarQuery("INSERT INTO fechas VALUES (null,  id_curso = '$curso', fecha = '$fecha', horario = '$hor', duracion = '$dur')");
+			$respuesta = $this->db->enviarQuery("INSERT INTO fechas VALUES (null, '$curso', '$fecha', '$hor', '$dur')");
 
-		if($respuesta){
-			return $respuesta;
-
-		}else{
-
-			if(!$respuesta && $this->db->error != ''){
-				echo $this->db->error;
-				return false;
+			if($respuesta){
+				return $respuesta;
 
 			}else{
-				return false;
+
+				if(!$respuesta && $this->db->error != ''){
+					echo $this->db->error;
+					return false;
+
+				}else{
+					return false;
+				}
 			}
+
 		}
 
-	}
 
-	public function modificarProducto($curso, $fecha, $hor, $dur){
+	public function modificarProducto($id,$curso, $fecha, $hor, $dur){
 
-		$respuesta = $this->db->enviarQuery("UPDATE fechas SET id_curso = '$curso', fecha = '$fecha', horario = '$hor', duracion = '$dur' WHERE id_fechas = '$id'");
+		$respuesta = $this->db->enviarQuery("UPDATE fechas SET '$curso','$fecha','$hor', '$dur' WHERE id_fechas = '$id'");
 
 		if($respuesta){
 			return $respuesta;

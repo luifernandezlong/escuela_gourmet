@@ -29,54 +29,71 @@ if (!isset($_SESSION['usuario'])){
 	</div>
 </nav>
 
+<div class="contenido-backoffice">
 
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Nuevo Producto</button>
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Nuevo Producto</button>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Nuevo Producto</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form action="" method="post">
-          <div class="form-group">
-		    <label for="nombre">Codigo</label>
-		    <input type="text" class="form-control" name="id_fechas" id="id_fechas" readonly="readonly">
-		  </div>
-		  <div class="form-group">
-		    <label for="nombre">Curso</label>
-		    <input type="text" class="form-control" name="id_curso" id="id_curso" placeholder="Escriba nombre del producto">
-		  </div>
-		  <div class="form-group">
-		    <label for="descripcion">Fecha de inicio</label>
-		    <input placeholder="¿Cuándo empieza?" class="form-control" name="fecha" id="fecha" type="text">
-		  </div>
-		  <div class="form-group">
-				<label for="precio">Horario</label>
-		    <input type="text" class="form-control" name="horario" id="horario" placeholder="¿Qué días y horarios tendrá el curso/carrera?">
-				<label for="precio">Duración</label>
-	 		 <input type="text" class="form-control" name="duracion" id="duracion" placeholder="¿Cuánto dura?">
-	 	 </div>
-		</form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary" onclick="altaModi();" id="accionButton">Dar de Alta</button>
-      </div>
-    </div>
-  </div>
-</div>
-<div id="contenido"></div>
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLabel">Nuevo Producto</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        <form action="" method="post">
+	          <div class="form-group">
+			    <label for="nombre">Codigo</label>
+			    <input type="text" class="form-control" name="id_fechas" id="id_fechas" readonly="readonly">
+			  </div>
+			  <div class="form-group">
+			    <label for="nombre">Curso</label>
+					<select class="form-control form-control-md" name="id_curso" id="id_curso">
+					  <option>1 - Bartender</option>
+						<option>2 - Barista</option>
+						<option>3 - Cata de Vino</option>
+						<option>4 - Cocina</option>
+						<option>5 - Pasteleria</option>
+						<option>6 - Panaderia</option>
+						<option>7 - Curso de Cerveza</option>
+						<option>8 - Tea sommelier</option>
+						<option>9 - Tea blender</option>
+						<option>10 - Bar Manager</option>
+						<option>11 - Sommelier de Café</option>
+						<option>12 - Sommelier de vino</option>
+						<option>13 - Carrera de cerveza</option>
+					</select>
+			    <!--<input type="text" class="form-control" name="id_curso" id="id_curso" placeholder="Escriba nombre del producto">-->
+			  </div>
+			  <div class="form-group">
+			    <label for="descripcion">Fecha de inicio</label>
+			    <input placeholder="¿Cuándo empieza?" class="form-control" name="fecha" id="fecha" type="text">
+			  </div>
+			  <div class="form-group">
+					<label for="precio">Horario</label>
+			    <input type="text" class="form-control" name="horario" id="horario" placeholder="¿Qué días y horarios tendrá el curso/carrera?">
+					<label for="precio">Duración</label>
+		 		 <input type="text" class="form-control" name="duracion" id="duracion" placeholder="¿Cuánto dura?">
+		 	 </div>
+			</form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+	        <button type="button" class="btn btn-primary" onclick="altaModi();" id="accionButton">Dar de Alta</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div id="contenido"></div>
+
+	</div>
+	</div>
+	<div id="push"></div>
+	</div>
 
 </div>
-</div>
-<div id="push"></div>
-</div>
-
 <footer>Este es el pié de página - Copyright &copy; <?php echo date('Y'); ?></footer>
 
 

@@ -53,9 +53,6 @@ form .btn-lg{
   width: 97.5%;
     margin: 3% 1.5%;
 }
-.col-md-6{
-  width: 100%!important;
-}
 @media (maz-width: 768px) {
   .form form{
     max-width: 90%;
@@ -64,4 +61,19 @@ form .btn-lg{
 .contenido{
   text-align: center;
   margin: 5% auto;
+}
+
+/* ARMADO DE FECHAS*/
+.fechas{
+  width: 60%;
+  clear: both;
+  margin: 2% auto;
+}
+.fecha{
+  font-size:1.2em;
+  font-weight: 600;
+}
+
+.fechas .duracion{
+  font-size: .8em;
 }

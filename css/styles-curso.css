@@ -57,3 +57,25 @@ h2{
   font-size: 3em;
 
 }
+
+
+
+.fechas{
+  width: 60%;
+  clear: both;
+  margin: 2% auto;
+  height: 25%;
+}
+.fechas div{
+  padding: 2%;
+  text-align: center
+}
+.fechas.fecha{
+  font-size:1.4em;
+  font-weight: 600;
+
+}
+
+.fechas .duracion{
+  font-size: .8em;
+}
