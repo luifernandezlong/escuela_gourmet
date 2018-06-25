@@ -8,6 +8,8 @@ $(document).ready(function(){
 	  var fecha = button.data('fecha')
 	  var horario = button.data('horario')
 	  var duracion = button.data('duracion')
+	  var sena = button.data('sena')
+	  var cupo = button.data('cupo')
 	  var boton = button.data('boton')
 	  var modal = $(this)
 	  modal.find('#id_fechas').val(id_fechas)
@@ -15,6 +17,8 @@ $(document).ready(function(){
 	  modal.find('#fecha').val(fecha)
 	  modal.find('#horario').val(horario)
 	  modal.find('#duracion').val(duracion)
+	  modal.find('#sena').val(sena)
+	  modal.find('#cupo').val(cupo)
 	  modal.find('#accionButton').html(boton)
 	})
 	});
@@ -43,7 +47,9 @@ function altaModi(){
 		  	id_curso: $("#id_curso").val(),
 		  	fecha: $("#fecha").val(),
 		  	horario: $("#horario").val(),
-		  	duracion: $("#duracion").val()
+		  	duracion: $("#duracion").val(),
+		  	sena: $("#sena").val(),
+		  	cupo: $("#cupo").val()
 		  },
 		  success: function(){
 		  	$('#exampleModal').modal('hide');
@@ -64,7 +70,9 @@ function altaModi(){
 				id_curso: $("#id_curso").val(),
 				fecha: $("#fecha").val(),
 				horario: $("#horario").val(),
-				duracion: $("#duracion").val()
+				duracion: $("#duracion").val(),
+				sena: $("#sena").val(),
+				cupo: $("#cupo").val()
 		  },
 		  success: function(){
 		  	$('#exampleModal').modal('hide');

@@ -45,11 +45,11 @@ if (!isset($_SESSION['usuario'])){
 	      <div class="modal-body">
 	        <form action="" method="post">
 	          <div class="form-group">
-			    <label for="nombre">Codigo</label>
+			    <label for="id_fechas">Codigo</label>
 			    <input type="text" class="form-control" name="id_fechas" id="id_fechas" readonly="readonly">
 			  </div>
 			  <div class="form-group">
-			    <label for="nombre">Curso</label>
+			    <label for="id_curso">Curso</label>
 					<select class="form-control form-control-md" name="id_curso" id="id_curso">
 					  <option>1 - Bartender</option>
 						<option>2 - Barista</option>
@@ -68,14 +68,18 @@ if (!isset($_SESSION['usuario'])){
 			    <!--<input type="text" class="form-control" name="id_curso" id="id_curso" placeholder="Escriba nombre del producto">-->
 			  </div>
 			  <div class="form-group">
-			    <label for="descripcion">Fecha de inicio</label>
+			    <label for="fecha">Fecha de inicio</label>
 			    <input placeholder="¿Cuándo empieza?" class="form-control" name="fecha" id="fecha" type="text">
 			  </div>
 			  <div class="form-group">
-					<label for="precio">Horario</label>
+					<label for="horario">Horario</label>
 			    <input type="text" class="form-control" name="horario" id="horario" placeholder="¿Qué días y horarios tendrá el curso/carrera?">
-					<label for="precio">Duración</label>
+					<label for="duracion">Duración</label>
 		 		 <input type="text" class="form-control" name="duracion" id="duracion" placeholder="¿Cuánto dura?">
+		 		<label for="sena">Seña</label>
+		 		 <input type="text" class="form-control" name="sena" id="sena" placeholder="¿Cuánto es la seña?">
+		 		<label for="sena">Cupo</label>
+		 		 <input type="text" class="form-control" name="cupo" id="cupo" placeholder="¿Cuánto asientos hay?">
 		 	 </div>
 			</form>
 	      </div>

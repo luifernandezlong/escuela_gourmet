@@ -21,8 +21,8 @@ class Producto {
 			}
 	}
 
-	public function altaProductos($curso, $fecha, $hor, $dur){
-			$respuesta = $this->db->enviarQuery("INSERT INTO fechas VALUES (null, '$curso', '$fecha', '$hor', '$dur')");
+	public function altaProductos($curso, $fecha, $hor, $dur, $sena, $cupo){
+			$respuesta = $this->db->enviarQuery("INSERT INTO fechas VALUES (null, '$curso', '$fecha', '$hor', '$dur','$sena','$cupo')");
 
 			if($respuesta){
 				return $respuesta;
@@ -41,9 +41,9 @@ class Producto {
 		}
 
 
-	public function modificarProducto($id,$curso, $fecha, $hor, $dur){
+	public function modificarProducto($id, $curso, $fecha, $hor, $dur, $sena, $cupo){
 
-		$respuesta = $this->db->enviarQuery("UPDATE fechas SET '$curso','$fecha','$hor', '$dur' WHERE id_fechas = '$id'");
+		$respuesta = $this->db->enviarQuery("UPDATE fechas SET '$curso', '$fecha', '$hor', '$dur', '$sena', '$cupo' WHERE id_fechas='$id'");
 
 		if($respuesta){
 			return $respuesta;
@@ -54,9 +54,9 @@ class Producto {
 		}
 	}
 
-	public function bajaProducto($id){
+	public function bajaProducto($id_fechas){
 
-		$respuesta = $this->db->enviarQuery("DELETE FROM fechas WHERE id_fechas = '$id'");
+		$respuesta = $this->db->enviarQuery("DELETE FROM fechas WHERE id_fechas = '$id_fechas'");
 
 		if($respuesta){
 			return $respuesta;
