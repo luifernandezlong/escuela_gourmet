@@ -17,7 +17,7 @@ class carrito{
 			$producto = new itemCarrito($id_fechas,$id_curso, $fecha, $horario, $duracion,$sena,1);
 			$this->array_productos[]= $producto;
 		}
-		
+
 	}
 
 	public function eliminar_producto($item){
@@ -45,37 +45,41 @@ class carrito{
 			echo '<table class="table">
 			  <thead>
 			    <tr>
-			      <th scope="col">Producto</th>
-			      <th scope="col">Precio unitario</th>
-			      <th scope="col">Cantidad</th>
-			      <th scope="col">Total</th>
-			      <th scope="col"></th>
-			      <th scope="col"></th>
+			      <th scope="col">Fecha de inicio</th>
+			      <th scope="col">Horario de cursada</th>
+			      <th scope="col">Seña parcial</th>
+			      <th scope="col">Cantidad de cupos</th>
+			      <th scope="col">Seña total</th>
 			      <th scope="col"></th>
 			    </tr>
 			  </thead>';
 			for ($i=0;$i<count($this->array_productos);$i++){
 
-			echo'	 
+			echo'
 				  <tbody>
 				    <tr>
 				      <td>'.$this->array_productos[$i]->fecha.'</td>
 				      <td>'.$this->array_productos[$i]->horario.'</td>
 				      <td>'. '$' .number_format($this->array_productos[$i]->sena,2).'</td>
-				      
+							<td>'.$this->array_productos[$i]->cantidad.'</td>
+ 				      <td>'. '$' .number_format(($this->array_productos[$i]->sena * $this->array_productos[$i]->cantidad),2).'</td>
+
+
+				      <td><button type="button" class="btn btn-primary" onclick="mas('.$i.');">+</button></td>
+				      <td><button type="button" class="btn btn-primary" onclick="menos('.$i.');">-</button></td>
 				      <td><button type="button" class="btn btn-primary" onclick="eliminar('.$i.');">Eliminar</button></td>
 				    </tr>';
 			}
 			echo' </tbody>
 				</table>';
 		}else {
-		
+
 			echo 'Todavia no tiene ningun producto';
 		}
 	}
 
 	public function vaciar_carrito(){
-		unset($this->array_productos);	
+		unset($this->array_productos);
 	}
 
 }

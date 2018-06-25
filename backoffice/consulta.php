@@ -1,16 +1,16 @@
 <?php
-	
+
 	include('autoload.php');
 
 	$base = new BasedeDatosmysqli(SERVIDOR, USUARIO, PASSWORD, BASE);
-	$productos = new Producto($base); 
+	$productos = new Producto($base);
 
 	if (isset($_POST['orden'])){
 		$query = "SELECT * FROM fechas ORDER BY ".$_POST['orden']." ".$_POST['tipo'];
 	}else{
-		$query = "SELECT * FROM fechas";	
+		$query = "SELECT * FROM fechas";
 	}
-	
+
 	$productos = $productos->getProductos($query);
 
 	if($productos){
@@ -18,23 +18,21 @@
 		echo '<table class="table">
 			  <thead>
 			    <tr>
-			      <th value="asc" class="columna asc" scope="col" onclick="cambiarorden(\'id_fechas\')">ID</th>
-			      <th value ="asc" class="columna asc" scope="col" onclick="cambiarorden(\'id_curso\')">Curso</th>
-			      <th value ="asc" class="columna asc" scope="col" onclick="cambiarorden(\'fecha\')">Fecha</th>
-			      <th value ="asc" class="columna asc" scope="col" onclick="cambiarorden(\'horario\')">Horario</th>
-			      <th value ="asc" class="columna asc" scope="col" onclick="cambiarorden(\'duracion\')">Duración</th>
-			      <th value ="asc" class="columna asc" scope="col" onclick="cambiarorden(\'sena\')">Seña</th>
-			      <th value ="asc" class="columna asc" scope="col" onclick="cambiarorden(\'cupo\')">Cupo</th>
+			      <th class="columna " scope="col">Curso</th>
+			      <th class="columna " scope="col">Fecha</th>
+			      <th class="columna " scope="col">Horario</th>
+			      <th class="columna " scope="col">Duración</th>
+			      <th class="columna " scope="col">Seña</th>
+			      <th class="columna " scope="col">Cupo</th>
 			      <th scope="col"></th>
 			    </tr>
 			  </thead>';
 
 		for($i = 0; $i < count($productos); $i++){
 
-		echo'	 
+		echo'
 			  <tbody>
 			    <tr>
-			      <th scope="row">'. $productos[$i]['id_fechas'].'</th>
 			      <td>'. $productos[$i]['id_curso'].'</td>
 			      <td>'. $productos[$i]['fecha'].'</td>
 			      <td>' . $productos[$i]['horario'].'</td>

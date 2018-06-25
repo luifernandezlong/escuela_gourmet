@@ -25,7 +25,6 @@ if (!isset($_SESSION['usuario'])){
 <nav class="navbar navbar-inverse" role="navigation">
 	<div class="container-fluid">
 			<a href="salir.php" class="btn btn-primary" style="margin-top:7px; float:right;">Cerrar Sesion</a>
-
 	</div>
 </nav>
 
@@ -37,7 +36,7 @@ if (!isset($_SESSION['usuario'])){
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
 	      <div class="modal-header">
-	        <h5 class="modal-title" id="exampleModalLabel">Nuevo Producto</h5>
+	        <h5 class="modal-title" id="exampleModalLabel">Nuevo inicio de curso o carrera</h5>
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 	          <span aria-hidden="true">&times;</span>
 	        </button>

@@ -6,14 +6,16 @@ class itemCarrito{
 	public $horario;
 	public $duracion;
 	public $sena;
+	public $cantidad;
 
-	public function __construct($id_fechas, $id_curso, $fecha, $horario, $duracion, $sena){
+	public function __construct($id_fechas, $id_curso, $fecha, $horario, $duracion, $sena, $cantidad){
 		$this->id_fechas = $id_fechas;
 		$this->id_curso = $id_curso;
 		$this->fecha = $fecha;
 		$this->horario = $horario;
 		$this->duracion = $duracion;
 		$this->sena = $sena;
+		$this->cantidad = $cantidad;
 	}
 }
 ?>

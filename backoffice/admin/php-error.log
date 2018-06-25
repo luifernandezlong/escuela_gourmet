@@ -1,0 +1,20 @@
+[25-Jun-2018 20:41:09 UTC] Hello, errors!
+[25-Jun-2018 20:45:18 UTC] Hello, errors!
+[25-Jun-2018 20:51:02 UTC] Hello, errors!
+[25-Jun-2018 20:51:02 UTC] PHP Notice:  Undefined variable: conexion in C:\wamp\www\escuela_gourmet\backoffice\admin\backoffice2.php on line 29
+[25-Jun-2018 20:51:02 UTC] PHP Stack trace:
+[25-Jun-2018 20:51:02 UTC] PHP   1. {main}() C:\wamp\www\escuela_gourmet\backoffice\admin\backoffice2.php:0
+[25-Jun-2018 20:51:02 UTC] PHP Fatal error:  Call to a member function query() on a non-object in C:\wamp\www\escuela_gourmet\backoffice\admin\backoffice2.php on line 29
+[25-Jun-2018 20:51:02 UTC] PHP Stack trace:
+[25-Jun-2018 20:51:02 UTC] PHP   1. {main}() C:\wamp\www\escuela_gourmet\backoffice\admin\backoffice2.php:0
+[25-Jun-2018 20:52:51 UTC] Hello, errors!
+[25-Jun-2018 20:52:52 UTC] PHP Notice:  Undefined index: usuario in C:\wamp\www\escuela_gourmet\backoffice\admin\backoffice2.php on line 32
+[25-Jun-2018 20:52:52 UTC] PHP Stack trace:
+[25-Jun-2018 20:52:52 UTC] PHP   1. {main}() C:\wamp\www\escuela_gourmet\backoffice\admin\backoffice2.php:0
+[25-Jun-2018 20:53:15 UTC] Hello, errors!
+[25-Jun-2018 20:53:30 UTC] Hello, errors!
+[25-Jun-2018 20:54:10 UTC] Hello, errors!
+[25-Jun-2018 20:54:11 UTC] PHP Notice:  Undefined variable: row in C:\wamp\www\escuela_gourmet\backoffice\admin\backoffice2.php on line 31
+[25-Jun-2018 20:54:11 UTC] PHP Stack trace:
+[25-Jun-2018 20:54:11 UTC] PHP   1. {main}() C:\wamp\www\escuela_gourmet\backoffice\admin\backoffice2.php:0
+[25-Jun-2018 20:54:34 UTC] Hello, errors!

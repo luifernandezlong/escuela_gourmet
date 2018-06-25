@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 19-06-2018 a las 02:39:49
+-- Tiempo de generación: 25-06-2018 a las 21:11:31
 -- Versión del servidor: 5.5.24-log
 -- Versión de PHP: 5.4.3
 
@@ -122,25 +122,21 @@ CREATE TABLE IF NOT EXISTS `fechas` (
   `fecha` varchar(255) NOT NULL,
   `horario` text NOT NULL,
   `duracion` text NOT NULL,
+  `sena` int(11) NOT NULL,
+  `cupo` int(11) NOT NULL,
   PRIMARY KEY (`id_fechas`),
   KEY `id_curso` (`id_curso`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=53 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
 
 --
 -- Volcado de datos para la tabla `fechas`
 --
 
-INSERT INTO `fechas` (`id_fechas`, `id_curso`, `fecha`, `horario`, `duracion`) VALUES
-(1, 1, '0000-00-00', 'Martes y jueves de 10 a 13 hs.', '8 clases - 1 mes'),
-(44, 1, '0', '0', '0'),
-(45, 1, '0', '0', '0'),
-(46, 1, '0', '0', '0'),
-(47, 1, '1', '1', '1'),
-(48, 1, '1', '1', '1'),
-(49, 1, '1', '1', '1'),
-(50, 1, '1', '1', '1'),
-(51, 1, '0', '0', '0'),
-(52, 1, '0', '0', '0');
+INSERT INTO `fechas` (`id_fechas`, `id_curso`, `fecha`, `horario`, `duracion`, `sena`, `cupo`) VALUES
+(2, 1, '3 de agosto', 'Sábados de 10 a 15 hs.', '1 mes - 4 clases', 1000, 20),
+(3, 1, '6 de julio', 'Miércoles y viernes de 10 a 13 hs.', '1 mes - 8 clases', 1000, 30),
+(5, 1, '7 de agosto', 'Sábados de 15 a 20 hs', '1 mes - 4 clases', 1000, 40),
+(6, 1, '20 de julio', 'Jueves y martes de 15 a 20 hs', '1 mes - 8 clases', 1000, 50);
 
 -- --------------------------------------------------------
 
@@ -155,7 +151,15 @@ CREATE TABLE IF NOT EXISTS `formulario` (
   `telefono` varchar(255) NOT NULL,
   `curso` varchar(255) NOT NULL,
   PRIMARY KEY (`id_formulario`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+
+--
+-- Volcado de datos para la tabla `formulario`
+--
+
+INSERT INTO `formulario` (`id_formulario`, `nombre`, `email`, `telefono`, `curso`) VALUES
+(5, '1', '1', '1', '1'),
+(6, '1', '1', '1', '1');
 
 -- --------------------------------------------------------
 
