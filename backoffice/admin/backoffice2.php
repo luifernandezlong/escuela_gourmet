@@ -51,7 +51,7 @@ if (!isset($_SESSION['usuario'])){
 			  <div class="form-group">
 			    <label for="id_curso">Curso</label>
 					<select class="form-control form-control-md" name="id_curso" id="id_curso">
-					  <option>1 - Bartender</option>
+					  <option>1</option>
 						<option>2 - Barista</option>
 						<option>3 - Cata de Vino</option>
 						<option>4 - Cocina</option>

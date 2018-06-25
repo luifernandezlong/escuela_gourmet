@@ -41,9 +41,9 @@ class Producto {
 		}
 
 
-	public function modificarProducto($id, $curso, $fecha, $hor, $dur, $sena, $cupo){
+	public function modificarProducto($id_fechas,$curso, $fecha, $horario, $duracion, $sena, $cupo){
 
-		$respuesta = $this->db->enviarQuery("UPDATE fechas SET '$curso', '$fecha', '$hor', '$dur', '$sena', '$cupo' WHERE id_fechas='$id'");
+		$respuesta = $this->db->enviarQuery("UPDATE fechas SET id_curso = '$curso', fecha = '$fecha', horario = '$horario', duracion = '$duracion', sena = '$sena', cupo = '$cupo' WHERE id_fechas = '$id_fechas'");
 
 		if($respuesta){
 			return $respuesta;

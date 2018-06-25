@@ -1,4 +1,4 @@
-/*$(document).ready(function(){
+$(document).ready(function(){
 	consulta();
 
 	$('#exampleModal').on('show.bs.modal', function (event) {
@@ -85,4 +85,3 @@ function baja(cod){
 	}
 
 }
-*/
