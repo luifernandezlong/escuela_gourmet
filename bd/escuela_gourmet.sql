@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 25-06-2018 a las 21:11:31
+-- Tiempo de generación: 28-06-2018 a las 03:41:38
 -- Versión del servidor: 5.5.24-log
 -- Versión de PHP: 5.4.3
 
@@ -101,14 +101,15 @@ CREATE TABLE IF NOT EXISTS `curso` (
   `divisor` varchar(255) NOT NULL,
   `color` varchar(10) NOT NULL,
   PRIMARY KEY (`id_curso`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Volcado de datos para la tabla `curso`
 --
 
 INSERT INTO `curso` (`id_curso`, `tipo`, `area`, `title`, `icono`, `bg`, `h1`, `descripcion`, `cantidad_cuotas`, `cuota`, `video`, `divisor`, `color`) VALUES
-(1, 'curso', 'cocteleria', 'Curso de Bartender', '', 'img/curso/curso-de-bartender.png', 'BARTENDER', 'El Curso de Bartender está diseñado para formar a los mejores profesionales en el arte de mezclar bebidas. Ya sea que quieras trabajar de esto o simplemente preparar los mejores cócteles para tus amigos, te brindaremos el curso más divertido y exigente del mercado.', '1 CUOTA', 1990, 'https://youtu.be/-QCNM8iXzJM', 'img/curso/bartender-separador.png', '#3facef');
+(1, 'curso', 'cocteleria', 'Curso de Bartender', '', 'img/curso/curso-de-bartender.png', 'BARTENDER', 'El Curso de Bartender está diseñado para formar a los mejores profesionales en el arte de mezclar bebidas. Ya sea que quieras trabajar de esto o simplemente preparar los mejores cócteles para tus amigos, te brindaremos el curso más divertido y exigente del mercado.', '1 CUOTA', 1990, 'https://youtu.be/-QCNM8iXzJM', 'img/curso/bartender-separador.png', '#3facef'),
+(2, 'curso', 'cafe', 'Curso de Barista', '', 'img/curso/curso-de-bartender.png', 'BARISTA', 'El Curso de Bartender está diseñado para formar a los mejores profesionales en el arte de mezclar bebidas. Ya sea que quieras trabajar de esto o simplemente preparar los mejores cócteles para tus amigos, te brindaremos el curso más divertido y exigente del mercado.', '1 CUOTA', 1990, 'https://youtu.be/-QCNM8iXzJM', 'img/curso/bartender-separador.png', '#b25a1b');
 
 -- --------------------------------------------------------
 
@@ -126,7 +127,7 @@ CREATE TABLE IF NOT EXISTS `fechas` (
   `cupo` int(11) NOT NULL,
   PRIMARY KEY (`id_fechas`),
   KEY `id_curso` (`id_curso`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ;
 
 --
 -- Volcado de datos para la tabla `fechas`
@@ -136,7 +137,9 @@ INSERT INTO `fechas` (`id_fechas`, `id_curso`, `fecha`, `horario`, `duracion`, `
 (2, 1, '3 de agosto', 'Sábados de 10 a 15 hs.', '1 mes - 4 clases', 1000, 20),
 (3, 1, '6 de julio', 'Miércoles y viernes de 10 a 13 hs.', '1 mes - 8 clases', 1000, 30),
 (5, 1, '7 de agosto', 'Sábados de 15 a 20 hs', '1 mes - 4 clases', 1000, 40),
-(6, 1, '20 de julio', 'Jueves y martes de 15 a 20 hs', '1 mes - 8 clases', 1000, 50);
+(6, 1, '20 de julio', 'Jueves y martes de 15 a 20 hs', '1 mes - 8 clases', 1000, 50),
+(7, 2, '28 de junio de 2018', 'Sábados de 10 a 15 hs.', '1 mes - 8 clases', 1000, 10),
+(8, 2, '28 de junio ', 'Sábados de 15 a 20 hs', '8 clases - 1 mes', 1000, 55);
 
 -- --------------------------------------------------------
 

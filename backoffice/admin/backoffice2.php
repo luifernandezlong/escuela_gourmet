@@ -19,6 +19,18 @@ if (!isset($_SESSION['usuario'])){
  <link rel="stylesheet" type="text/css" href="../boot/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../css/backoffice.css">
 <link href="http://fonts.googleapis.com/css?family=Asap:400,700" rel="stylesheet" type="text/css">
+
+<style type="text/css">
+	#carrito{
+		display: none;
+	}
+	.asc::before{
+		content: "▲";
+	}
+	.desc::before{
+		content: "▼";
+	}
+</style>
 </head>
 
 <body>
@@ -49,9 +61,9 @@ if (!isset($_SESSION['usuario'])){
 			  </div>
 			  <div class="form-group">
 			    <label for="id_curso">Curso</label>
-					<select class="form-control form-control-md" name="id_curso" id="id_curso">
+			<select class="form-control form-control-md" name="id_curso" id="id_curso">
 					  <option>1</option>
-						<option>2 - Barista</option>
+						<option>2</option>
 						<option>3 - Cata de Vino</option>
 						<option>4 - Cocina</option>
 						<option>5 - Pasteleria</option>

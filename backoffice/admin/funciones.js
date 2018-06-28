@@ -100,3 +100,31 @@ function baja(id_fechas){
 		alert("baja");
 	}
 }
+
+function cambiarorden(columna){
+ 	//alert (columna);
+ 	//alert($(".columna").attr("value"));
+ 	//alert($(".columna").attr("class"));
+ 	$.ajax({
+	  method: "POST",
+	  url: "consulta.php",
+	  data: {
+	  	orden: columna,
+	  	tipo: $(".columna").attr("value")
+	  },
+	  success: function(data){
+	  	$("#contenido").html(data);
+	  	if ($(".columna").attr("value") == "asc"){
+	  		$(".columna").removeClass("asc")
+	  		$(".columna").addClass("desc")
+	  		$(".columna").attr({"value": "desc"})
+	  	}else{
+	  	 if ($(".columna").attr("value") == "desc"){
+	  		$(".columna").removeClass("desc")
+	  		$(".columna").addClass("asc")
+	  		$(".columna").attr({"value": "asc"})
+	  	}}
+
+	  }
+	});
+}

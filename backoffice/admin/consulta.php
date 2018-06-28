@@ -6,7 +6,6 @@
 	$productos = new producto($base);
 
 	$productos = $productos->getProductos();
-
 	if($productos){
 
 		echo '<table class="table">

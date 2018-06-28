@@ -11,18 +11,26 @@
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/styles-curso.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+<!--	<script>var pathname = window.location.pathname.split( '/' );
+	var path_id = pathname[1];
+	var path_controller = pathname[2];
+	var path_action = pathname[3];
+
+</script>-->
 </head>
 <body>
-
+	<?php
+		$id=$_GET['id'];
+	?>
 	<?php
 		include('inc/nav.php');
 	?>
 
 		<?php
 			include('inc/conexion.php');
-			$sql = "SELECT *  FROM `curso`";
-					$result = $conexion->query($sql);
-					if ($result -> num_rows > 0) {
+			$sql = "SELECT *  FROM `curso` WHERE id_curso=".$id;
+			$result = $conexion->query($sql);
+					if ($result->num_rows > 0) {
 						while($row = $result->fetch_assoc()) {
 							echo '
 									<div style="background:url('.$row['bg'].') no-repeat center;background-size:cover" class="inicio-curso container-fluid">
@@ -42,11 +50,11 @@
 											</div>
 										</div>
 									</div>
-									
+
 										<h2 style="color:'.$row['color'].';">Inicios del '.$row['title'].'</h2>
-										
-									
-									
+
+
+
 							'
 					;
 					}
@@ -59,12 +67,12 @@
 				?>
 <div class="fechas">	<?php
 		include('inc/conexion.php');
-		$sql = "SELECT *  FROM `fechas`";
+		$sql = "SELECT *  FROM `fechas` WHERE id_curso=".$id;
 				$result = $conexion->query($sql);
 				if ($result -> num_rows > 0) {
 					while($row = $result->fetch_assoc()) {
-						echo '	
-								  
+						echo '
+
 								   		<div class="col-xs-6 ">
 								    		<span class="fecha"> '.mb_convert_encoding($row['fecha'], "UTF-8").'</span></br>
 										    <span class="horario"> '.mb_convert_encoding($row['horario'], "UTF-8").'</span></br>
@@ -75,14 +83,14 @@
 							}else{
 								echo 'not';
 							}
-								
+
 
 			$conexion->close();
 	?>
 	</div>
 	<?php
 			include('inc/conexion.php');
-			$sql = "SELECT *  FROM `curso`";
+			$sql = "SELECT *  FROM `curso` WHERE id_curso=".$id;
 					$result = $conexion->query($sql);
 					if ($result -> num_rows > 0) {
 						while($row = $result->fetch_assoc()) {
