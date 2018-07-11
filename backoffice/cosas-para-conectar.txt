@@ -1,0 +1,4 @@
+Cosas para conectar:
+
+*BD
+*mail.php, class.phpmailer.php
