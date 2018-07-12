@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 28-06-2018 a las 03:41:38
+-- Tiempo de generación: 12-07-2018 a las 02:36:19
 -- Versión del servidor: 5.5.24-log
 -- Versión de PHP: 5.4.3
 
@@ -45,10 +45,9 @@ INSERT INTO `beneficios` (`id_beneficios`, `id_curso`, `tipo`, `icono`, `titulo`
 (1, 1, 'grande', 'img/iconos/beneficios/cocteleria-1.png', 'RÁPIDA SALIDA LABORAL', 'En Escuela Gourmet te ofrecemos las mejores ofertas laborales a nivel nacional e internacional.'),
 (2, 1, 'grande', 'img/iconos/beneficios/cocteleria-2.png', 'PASANTÍAS EN EL EXTERIOR', 'Vas a poder viajar al exterior, realizar pasantías como bartender y vivir la experiencia de seguir aprendiendo de otras culturas.'),
 (3, 1, 'grande', 'img/iconos/beneficios/cocteleria-3.png', 'PRÁCTICAS GRATUITAS', 'Vení fuera del horario de cursada a practicar gratuitamente para convertirte en el mejor bartender.'),
-(4, 1, 'grande', 'img/iconos/beneficios/cocteleria-3.png', 'SEMINARIOS GRATUITOS', 'Actualizate constantemente con nuestros seminarios ¡nadie te va a superar!'),
-(5, 1, 'chico', '', 'CERTIFICADOS OFICIALES', 'Somos la única escuela de coctelería con certificación oficial avalada por el Ministerio de Educación. También tendrás otro certificado de nivel internacional.'),
-(6, 1, 'chico', '', 'VISITAS A BARES', 'En el curso de barman te llevaremos a conocer los mejores bares de la Ciudad de Buenos Aires.'),
-(7, 1, 'chico', '', 'BEBIDAS Y EQUIPAMIENTO', 'Trabajamos con el mejor equipamiento del mercado y bebidas importadas de la mejor calidad.');
+(4, 1, 'chico', 'img/iconos/beneficios/cocteleria-4.png', 'SEMINARIOS GRATUITOS', 'Actualizate constantemente con nuestros seminarios ¡nadie te va a superar!'),
+(6, 1, 'chico', 'img/iconos/beneficios/cocteleria-5.png', 'VISITAS A BARES', 'En el curso de barman te llevaremos a conocer los mejores bares de la Ciudad de Buenos Aires.'),
+(7, 1, 'chico', 'img/iconos/beneficios/cocteleria-6.png', 'BEBIDAS Y EQUIPAMIENTO', 'Trabajamos con el mejor equipamiento del mercado y bebidas importadas de la mejor calidad.');
 
 -- --------------------------------------------------------
 
@@ -108,7 +107,7 @@ CREATE TABLE IF NOT EXISTS `curso` (
 --
 
 INSERT INTO `curso` (`id_curso`, `tipo`, `area`, `title`, `icono`, `bg`, `h1`, `descripcion`, `cantidad_cuotas`, `cuota`, `video`, `divisor`, `color`) VALUES
-(1, 'curso', 'cocteleria', 'Curso de Bartender', '', 'img/curso/curso-de-bartender.png', 'BARTENDER', 'El Curso de Bartender está diseñado para formar a los mejores profesionales en el arte de mezclar bebidas. Ya sea que quieras trabajar de esto o simplemente preparar los mejores cócteles para tus amigos, te brindaremos el curso más divertido y exigente del mercado.', '1 CUOTA', 1990, 'https://youtu.be/-QCNM8iXzJM', 'img/curso/bartender-separador.png', '#3facef'),
+(1, 'curso', 'cocteleria', 'Curso de Bartender', '', 'img/curso/curso-de-bartender.png', 'BARTENDER', 'El Curso de Bartender está diseñado para formar a los mejores profesionales en el arte de mezclar bebidas. Ya sea que quieras trabajar de esto o simplemente preparar los mejores cócteles para tus amigos, te brindaremos el curso más divertido y exigente del mercado.', '1 CUOTA', 1990, '<iframe  src="https://www.youtube.com/embed/4waHcgtRkWQ?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>', 'img/curso/bartender-separador.png', '#3facef'),
 (2, 'curso', 'cafe', 'Curso de Barista', '', 'img/curso/curso-de-bartender.png', 'BARISTA', 'El Curso de Bartender está diseñado para formar a los mejores profesionales en el arte de mezclar bebidas. Ya sea que quieras trabajar de esto o simplemente preparar los mejores cócteles para tus amigos, te brindaremos el curso más divertido y exigente del mercado.', '1 CUOTA', 1990, 'https://youtu.be/-QCNM8iXzJM', 'img/curso/bartender-separador.png', '#b25a1b');
 
 -- --------------------------------------------------------
@@ -127,7 +126,7 @@ CREATE TABLE IF NOT EXISTS `fechas` (
   `cupo` int(11) NOT NULL,
   PRIMARY KEY (`id_fechas`),
   KEY `id_curso` (`id_curso`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
 --
 -- Volcado de datos para la tabla `fechas`
@@ -139,7 +138,7 @@ INSERT INTO `fechas` (`id_fechas`, `id_curso`, `fecha`, `horario`, `duracion`, `
 (5, 1, '7 de agosto', 'Sábados de 15 a 20 hs', '1 mes - 4 clases', 1000, 40),
 (6, 1, '20 de julio', 'Jueves y martes de 15 a 20 hs', '1 mes - 8 clases', 1000, 50),
 (7, 2, '28 de junio de 2018', 'Sábados de 10 a 15 hs.', '1 mes - 8 clases', 1000, 10),
-(8, 2, '28 de junio ', 'Sábados de 15 a 20 hs', '8 clases - 1 mes', 1000, 55);
+(8, 2, '28 de junio ', 'Sábados de 15 a 20 hs', '8 clases - 1 mes', 1000, 30);
 
 -- --------------------------------------------------------
 
@@ -154,7 +153,7 @@ CREATE TABLE IF NOT EXISTS `formulario` (
   `telefono` varchar(255) NOT NULL,
   `curso` varchar(255) NOT NULL,
   PRIMARY KEY (`id_formulario`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Volcado de datos para la tabla `formulario`
@@ -162,7 +161,10 @@ CREATE TABLE IF NOT EXISTS `formulario` (
 
 INSERT INTO `formulario` (`id_formulario`, `nombre`, `email`, `telefono`, `curso`) VALUES
 (5, '1', '1', '1', '1'),
-(6, '1', '1', '1', '1');
+(6, '1', '1', '1', '1'),
+(7, '', '', '', ''),
+(8, '', '', '', ''),
+(9, 'Luisina FernÃ¡ndez Long', 'luisina.fl@hotmail.com', '1126455369', '');
 
 -- --------------------------------------------------------
 

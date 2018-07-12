@@ -43,7 +43,8 @@ p{
 }
 form input{
   padding: .5%;
-  margin:1%;
+  margin:1% 0;
+ padding-right: 15px;
 }
 
 .form h5{
@@ -184,4 +185,30 @@ li.dropdown:hover > .dropdown-menu {
 .item-cronograma button{
   clear: both;
   float: right;
+}
+
+
+
+
+/* FORMULARIO DE INSCRIPCIÓN*/
+
+
+.form-inscripcion{
+  color: white;
+  padding: 5%;
+  width: 100%;
+  margin: 3% auto;
+  text-align: center;
+}
+.titulo-inscripcion{
+  padding: 2%;
+  font-size: 2em;
+}
+.form-inscripcion input, .form-inscripcion select{
+  color: black;
+  padding: .2%;
+  padding-right: 15px!important;
+}
+.id-fecha{
+  color:white;
 }

@@ -4,7 +4,14 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-	<title></title>
+	<title><?php
+	include('inc/conexion.php');
+	$sql = "SELECT *  FROM `curso` WHERE id_curso=".$id;
+	$result = $conexion->query($sql);
+			if ($result->num_rows > 0) {
+				echo ''.utf8_encode($row['title']).''
+				;}
+	?></title>
 	 <link rel="shortcut icon" href="img/favicon.png" />
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
@@ -26,31 +33,31 @@
 		include('inc/nav.php');
 	?>
 
-	<?php 
+	<?php
 		include('inc/inicio-curso.php');
 	?>
-		
+
 	<div class="fechas">
-		<?php 
+		<?php
 			include('inc/fechas.php');
-		?>	
+		?>
 	</div>
-	<?php 
+	<?php
 		include('inc/form.php');
 	?>
 
-	
+
 	<div class="container-fluid beneficios">
 		<?php
 			include('inc/beneficios.php');
 		?>
     </div>
 
-	<?php 
+	<?php
 		include('inc/cronograma-curso.php');
 	?>
-     
-  
+
+
 	<script src="bootstrap/js/jquery.js"></script>
 	<script src="bootstrap/js/bootstrap.js"></script>
 </body>
