@@ -18,7 +18,7 @@
 												<span class="cant-cuota">'.$row['cantidad_cuotas'].'</span>
 												<span>$'.$row['cuota'].'</span>
 												<a class="btn btn-primary btn-lg">Contacto</a>
-												<a class="btn btn-primary btn-lg" href="inscripcion.php?id='.$row['id_curso'].'">Inscribirme</a>
+												<a class="btn btn-primary btn-lg" href="inscripcion/inscripcion.php?id='.$row['id_curso'].'">Inscribirme</a>
 											</div>
 										</div>
 									</div>

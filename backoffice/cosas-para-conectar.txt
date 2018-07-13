@@ -2,3 +2,10 @@ Cosas para conectar:
 
 *BD
 *mail.php, class.phpmailer.php
+
+
+*datos de form y form de inscriptos tienen que enviarse a info y transferencias
+
+
+
+*inscripcion: hacer que cuando una persona seleccione la fecha el form imprima el id en la bd

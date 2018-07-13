@@ -20,17 +20,6 @@ if (!isset($_SESSION['usuario'])){
 <link rel="stylesheet" type="text/css" href="../css/backoffice.css">
 <link href="http://fonts.googleapis.com/css?family=Asap:400,700" rel="stylesheet" type="text/css">
 
-<style type="text/css">
-	#carrito{
-		display: none;
-	}
-	.asc::before{
-		content: "▲";
-	}
-	.desc::before{
-		content: "▼";
-	}
-</style>
 </head>
 
 <body>
